@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,10 +19,13 @@
     .product-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(44,40,37,0.1); }
     .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
+    
+    /* Cart Panel Slide Animation */
     .cart-panel { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94); }
     .cart-panel.open { transform: translateX(0); }
     .overlay { opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
     .overlay.open { opacity: 1; pointer-events: auto; }
+    
     .color-swatch { width: 24px; height: 24px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; transition: border-color 0.2s; }
     .color-swatch.active { border-color: #2C2825; }
   </style>
@@ -34,8 +37,8 @@
    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
     <h1 class="font-display text-2xl tracking-wider">MAISON VALENTE</h1>
     <div class="flex items-center gap-8">
-      <a href="#products" class="text-sm tracking-widest uppercase cursor-pointer hover:opacity-60">التشكيلة</a> 
-      <a href="#contact" class="text-sm tracking-widest uppercase cursor-pointer hover:opacity-60">تواصل معنا</a> 
+      <a href="#products" class="text-sm tracking-widest uppercase cursor-pointer hover:opacity-60">Collection</a> 
+      <a href="#contact" class="text-sm tracking-widest uppercase cursor-pointer hover:opacity-60">Contact</a> 
       <button id="cart-btn" class="relative" aria-label="Open cart"> 
         <i data-lucide="shopping-bag" style="width:22px;height:22px;color:#2C2825"></i> 
         <span id="cart-count" class="absolute -top-2 -right-2 w-5 h-5 bg-[#2C2825] text-white text-xs rounded-full flex items-center justify-center hidden">0</span> 
@@ -51,75 +54,75 @@
       <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1600" alt="Hero Luxury" class="w-full h-full object-cover" loading="lazy">
     </div>
     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-    <div class="absolute bottom-16 right-8 md:right-16 text-right">
-     <p class="font-display text-white text-4xl md:text-6xl leading-tight">الأناقة الإيطالية الفاخرة</p>
+    <div class="absolute bottom-16 left-8 md:left-16 text-left">
+     <p class="font-display text-white text-4xl md:text-6xl leading-tight">Italian Luxury & Craftsmanship</p>
     </div>
    </header>
 
    <!-- Products Section -->
    <section id="products" class="py-24 px-6">
     <div class="max-w-7xl mx-auto">
-     <h2 class="font-display text-3xl text-center mb-16 tracking-wide">المجموعة الحصرية</h2>
+     <h2 class="font-display text-3xl text-center mb-16 tracking-wide">The Exclusive Collection</h2>
      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       
       <!-- Product 1 -->
-      <div class="product-card fade-in cursor-pointer" data-product="ساعة Oro Timepiece" data-price="2450">
+      <div class="product-card fade-in cursor-pointer" data-product="Oro Timepiece" data-price="2450">
        <div class="aspect-[3/4] overflow-hidden rounded-sm mb-4">
         <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=600" alt="Oro Timepiece" class="w-full h-full object-cover" loading="lazy">
        </div>
-       <h3 class="font-display text-lg">ساعة Oro Timepiece</h3>
-       <p class="mt-1 text-sm font-semibold">2,450 د.ج</p>
+       <h3 class="font-display text-lg">Oro Timepiece</h3>
+       <p class="mt-1 text-sm font-semibold">€2,450</p>
        <div class="flex gap-2 mt-2">
-        <span class="color-swatch active" style="background:#C5A858" data-color="ذهبي"></span> 
-        <span class="color-swatch" style="background:#C0C0C0" data-color="فضي"></span> 
-        <span class="color-swatch" style="background:#1a1a1a" data-color="أسود"></span>
+        <span class="color-swatch active" style="background:#C5A858" data-color="Gold"></span> 
+        <span class="color-swatch" style="background:#C0C0C0" data-color="Silver"></span> 
+        <span class="color-swatch" style="background:#1a1a1a" data-color="Black"></span>
        </div>
-       <button class="add-to-bag mt-3 text-xs tracking-widest uppercase border-b border-current pb-0.5 hover:opacity-60 transition-opacity">إضافة إلى الحقيبة</button>
+       <button class="add-to-bag mt-3 text-xs tracking-widest uppercase border-b border-current pb-0.5 hover:opacity-60 transition-opacity">Add to Bag</button>
       </div>
 
       <!-- Product 2 -->
-      <div class="product-card fade-in cursor-pointer" data-product="محفظة Cuoio Wallet" data-price="680">
+      <div class="product-card fade-in cursor-pointer" data-product="Cuoio Wallet" data-price="680">
        <div class="aspect-[3/4] overflow-hidden rounded-sm mb-4">
         <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?q=80&w=600" alt="Cuoio Wallet" class="w-full h-full object-cover" loading="lazy">
        </div>
-       <h3 class="font-display text-lg">محفظة Cuoio Wallet</h3>
-       <p class="mt-1 text-sm font-semibold">680 د.ج</p>
+       <h3 class="font-display text-lg">Cuoio Wallet</h3>
+       <p class="mt-1 text-sm font-semibold">€680</p>
        <div class="flex gap-2 mt-2">
-        <span class="color-swatch active" style="background:#8B4513" data-color="بني"></span> 
-        <span class="color-swatch" style="background:#1a1a1a" data-color="أسود"></span> 
-        <span class="color-swatch" style="background:#2F4F4F" data-color="أخضر داكن"></span>
+        <span class="color-swatch active" style="background:#8B4513" data-color="Brown"></span> 
+        <span class="color-swatch" style="background:#1a1a1a" data-color="Black"></span> 
+        <span class="color-swatch" style="background:#2F4F4F" data-color="Dark Green"></span>
        </div>
-       <button class="add-to-bag mt-3 text-xs tracking-widest uppercase border-b border-current pb-0.5 hover:opacity-60 transition-opacity">إضافة إلى الحقيبة</button>
+       <button class="add-to-bag mt-3 text-xs tracking-widest uppercase border-b border-current pb-0.5 hover:opacity-60 transition-opacity">Add to Bag</button>
       </div>
 
       <!-- Product 3 -->
-      <div class="product-card fade-in cursor-pointer" data-product="وشاح Seta Scarf" data-price="520">
+      <div class="product-card fade-in cursor-pointer" data-product="Seta Scarf" data-price="520">
        <div class="aspect-[3/4] overflow-hidden rounded-sm mb-4">
         <img src="https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=600" alt="Seta Scarf" class="w-full h-full object-cover" loading="lazy">
        </div>
-       <h3 class="font-display text-lg">وشاح Seta Scarf</h3>
-       <p class="mt-1 text-sm font-semibold">520 د.ج</p>
+       <h3 class="font-display text-lg">Seta Scarf</h3>
+       <p class="mt-1 text-sm font-semibold">€520</p>
        <div class="flex gap-2 mt-2">
-        <span class="color-swatch active" style="background:#F5C6D0" data-color="وردي"></span> 
-        <span class="color-swatch" style="background:#4169E1" data-color="أزرق"></span> 
-        <span class="color-swatch" style="background:#8B0000" data-color="أحمر"></span>
+        <span class="color-swatch active" style="background:#F5C6D0" data-color="Pink"></span> 
+        <span class="color-swatch" style="background:#4169E1" data-color="Blue"></span> 
+        <span class="color-swatch" style="background:#8B0000" data-color="Red"></span>
        </div>
-       <button class="add-to-bag mt-3 text-xs tracking-widest uppercase border-b border-current pb-0.5 hover:opacity-60 transition-opacity">إضافة إلى الحقيبة</button>
+       <button class="add-to-bag mt-3 text-xs tracking-widest uppercase border-b border-current pb-0.5 hover:opacity-60 transition-opacity">Add to Bag</button>
       </div>
 
       <!-- Product 4 -->
-      <div class="product-card fade-in cursor-pointer" data-product="حزام Cintura Belt" data-price="390">
+      <div class="product-card fade-in cursor-pointer" data-product="Cintura Belt" data-price="390">
        <div class="aspect-[3/4] overflow-hidden rounded-sm mb-4">
         <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=600" alt="Cintura Belt" class="w-full h-full object-cover" loading="lazy">
        </div>
-       <h3 class="font-display text-lg">حزام Cintura Belt</h3>
-       <p class="mt-1 text-sm font-semibold">390 د.ج</p>
+       <h3 class="font-display text-lg">Cintura Belt</h3>
+       <p class="mt-1 text-sm font-semibold">€390</p>
        <div class="flex gap-2 mt-2">
-        <span class="color-swatch active" style="background:#8B4513" data-color="بني"></span> 
-        <span class="color-swatch" style="background:#1a1a1a" data-color="أسود"></span> 
-        <span class="color-swatch" style="background:#D2691E" data-color="بني فاتح"></span>
+        <span class="color-swatch active" style="background:#8B4513" data-color="Brown"></span> 
+        <span class="color-swatch" style="background:#1a1a1a" data-color="Black"></span> 
+        <span class="color-swatch" style="background:#D2691E" data-color="Tan"></span>
        </div>
-       <button class="add-to-bag mt-3 text-xs tracking-widest uppercase border-b border-current pb-0.5 hover:opacity-60 transition-opacity">إضافة إلى الحقيبة</button>
+       <button class="add-to-bag mt-3 text-xs tracking-widest uppercase border-b border-current pb-0.5 hover:opacity-60 transition-opacity">Add to Bag</button>
       </div>
 
      </div>
@@ -132,14 +135,14 @@
       <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1600" alt="Craftsmanship" class="w-full h-full object-cover" loading="lazy">
     </div>
     <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
-     <p class="font-display text-white text-3xl md:text-5xl text-center px-6">إتقان يدوي يتوارثه الأجيال</p>
+     <p class="font-display text-white text-3xl md:text-5xl text-center px-6">Timeless Elegance & Handmade Quality</p>
     </div>
    </section>
 
    <!-- Contact Section -->
    <section id="contact" class="py-16 px-6">
     <div class="max-w-7xl mx-auto text-center">
-     <h2 class="font-display text-2xl mb-8">تابعنا على مواقع التواصل</h2>
+     <h2 class="font-display text-2xl mb-8">Follow Us</h2>
      <div class="flex justify-center gap-8">
       <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-[#2C2825] hover:opacity-60 transition-opacity"> <i data-lucide="instagram" style="width:28px;height:28px"></i> </a> 
       <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="text-[#2C2825] hover:opacity-60 transition-opacity"> <i data-lucide="facebook" style="width:28px;height:28px"></i> </a> 
@@ -152,16 +155,18 @@
    <!-- Footer -->
    <footer class="py-12 px-6 border-t border-stone-200">
     <div class="max-w-7xl mx-auto text-center">
-     <p class="text-xs tracking-widest uppercase text-stone-500">© 2026 MAISON VALENTE. جميع الحقوق محفوظة.</p>
+     <p class="text-xs tracking-widest uppercase text-stone-500">© 2026 MAISON VALENTE. ALL RIGHTS RESERVED.</p>
     </div>
    </footer>
   </main>
 
-  <!-- Cart Panel (Drawer) -->
+  <!-- Cart Overlay -->
   <div id="cart-overlay" class="overlay fixed inset-0 z-[60] bg-black/40" aria-hidden="true"></div>
-  <aside id="cart-panel" class="cart-panel fixed top-0 left-0 bottom-0 z-[70] w-full max-w-md bg-white shadow-2xl flex flex-col" aria-label="Shopping bag">
+
+  <!-- Cart Panel (Hidden by default using 'hidden' class, slides out on demand) -->
+  <aside id="cart-panel" class="cart-panel hidden fixed top-0 right-0 bottom-0 z-[70] w-full max-w-md bg-white shadow-2xl flex-col" aria-label="Shopping bag">
    <div class="flex items-center justify-between p-6 border-b">
-    <h2 class="font-display text-xl">حقيبة التسوق</h2>
+    <h2 class="font-display text-xl">Shopping Bag</h2>
     <button id="cart-close" aria-label="Close cart"><i data-lucide="x" style="width:24px;height:24px"></i></button>
    </div>
    
@@ -170,41 +175,37 @@
 
     <!-- Customer Form -->
     <form id="checkout-form" class="space-y-4 border-t pt-6">
-     <h3 class="font-display text-lg mb-2">معلومات الشحن</h3>
+     <h3 class="font-display text-lg mb-2">Shipping Information</h3>
      <div class="grid grid-cols-2 gap-3">
       <div>
-        <label class="block text-xs uppercase tracking-wide mb-1" for="inp-firstname">الاسم</label> 
+        <label class="block text-xs uppercase tracking-wide mb-1" for="inp-firstname">First Name</label> 
         <input id="inp-firstname" type="text" class="w-full border border-stone-200 rounded px-3 py-2 text-sm focus:outline-none focus:border-[#2C2825]" required>
       </div>
       <div>
-        <label class="block text-xs uppercase tracking-wide mb-1" for="inp-lastname">اللقب</label> 
+        <label class="block text-xs uppercase tracking-wide mb-1" for="inp-lastname">Last Name</label> 
         <input id="inp-lastname" type="text" class="w-full border border-stone-200 rounded px-3 py-2 text-sm focus:outline-none focus:border-[#2C2825]" required>
       </div>
      </div>
      <div>
-      <label class="block text-xs uppercase tracking-wide mb-1" for="inp-phone">رقم الهاتف</label> 
+      <label class="block text-xs uppercase tracking-wide mb-1" for="inp-phone">Phone Number</label> 
       <input id="inp-phone" type="tel" class="w-full border border-stone-200 rounded px-3 py-2 text-sm focus:outline-none focus:border-[#2C2825]" required>
      </div>
      <div>
-      <label class="block text-xs uppercase tracking-wide mb-1" for="inp-wilaya">الولاية</label> 
-      <select id="inp-wilaya" class="w-full border border-stone-200 rounded px-3 py-2 text-sm focus:outline-none focus:border-[#2C2825]" required> 
-        <option value="">-- اختر الولاية --</option> 
-        <option>01 - أدرار</option><option>02 - الشلف</option><option>03 - الأغواط</option><option>04 - أم البواقي</option><option>05 - باتنة</option><option>06 - بجاية</option><option>07 - بسكرة</option><option>08 - بشار</option><option>09 - البليدة</option><option>10 - البويرة</option> 
-        <option>16 - الجزائر</option><option>31 - وهران</option><option>25 - قسنطينة</option>
-      </select>
+      <label class="block text-xs uppercase tracking-wide mb-1" for="inp-country">City / Region</label> 
+      <input id="inp-country" type="text" placeholder="e.g. Algiers, Paris, Milan" class="w-full border border-stone-200 rounded px-3 py-2 text-sm focus:outline-none focus:border-[#2C2825]" required>
      </div>
      
      <!-- Payment Methods -->
      <div>
-      <p class="block text-xs uppercase tracking-wide mb-2">طريقة الدفع</p>
+      <p class="block text-xs uppercase tracking-wide mb-2">Payment Method</p>
       <div class="space-y-2">
         <label class="flex items-center gap-2 cursor-pointer"> 
           <input type="radio" name="payment" value="cash" checked class="accent-[#2C2825]"> 
-          <span class="text-sm">الدفع عند الاستلام</span> 
+          <span class="text-sm">Cash on Delivery</span> 
         </label> 
         <label class="flex items-center gap-2 cursor-pointer"> 
-          <input type="radio" name="payment" value="gold-card" class="accent-[#2C2825]"> 
-          <span class="text-sm">البطاقة الذهبية</span> 
+          <input type="radio" name="payment" value="card" class="accent-[#2C2825]"> 
+          <span class="text-sm">Credit Card / Edahabia</span> 
         </label>
       </div>
      </div>
@@ -213,11 +214,11 @@
 
    <div class="p-6 border-t bg-stone-50">
     <div class="flex justify-between mb-4">
-      <span class="text-sm tracking-wide uppercase">المجموع</span> 
-      <span id="cart-total" class="font-display text-lg font-bold">0 د.ج</span>
+      <span class="text-sm tracking-wide uppercase">Total</span> 
+      <span id="cart-total" class="font-display text-lg font-bold">€0</span>
     </div>
-    <button id="checkout-btn" class="w-full py-4 bg-[#2C2825] text-white text-sm tracking-widest uppercase transition-opacity hover:opacity-90">إتمام الطلب</button>
-    <p id="demo-notice" class="text-center text-xs mt-3 text-stone-500 hidden">تم تسجيل طلبك بنجاح!</p>
+    <button id="checkout-btn" class="w-full py-4 bg-[#2C2825] text-white text-sm tracking-widest uppercase transition-opacity hover:opacity-90">Checkout</button>
+    <p id="demo-notice" class="text-center text-xs mt-3 text-stone-500 hidden">Your order has been placed successfully!</p>
    </div>
   </aside>
 
@@ -246,8 +247,25 @@
     const cartItemsEl = document.getElementById('cart-items');
     const cartTotalEl = document.getElementById('cart-total');
 
-    function openCart() { cartPanel.classList.add('open'); cartOverlay.classList.add('open'); }
-    function closeCart() { cartPanel.classList.remove('open'); cartOverlay.classList.remove('open'); }
+    function openCart() { 
+      cartPanel.classList.remove('hidden');
+      cartPanel.classList.add('flex');
+      // Timeout to allow DOM layout to register for smooth CSS transition
+      setTimeout(() => {
+        cartPanel.classList.add('open'); 
+        cartOverlay.classList.add('open'); 
+      }, 10);
+    }
+
+    function closeCart() { 
+      cartPanel.classList.remove('open'); 
+      cartOverlay.classList.remove('open');
+      setTimeout(() => {
+        cartPanel.classList.remove('flex');
+        cartPanel.classList.add('hidden');
+      }, 400); // Wait for CSS transition to complete
+    }
+
     cartBtn.addEventListener('click', openCart);
     cartClose.addEventListener('click', closeCart);
     cartOverlay.addEventListener('click', closeCart);
@@ -259,17 +277,17 @@
         <div class="flex justify-between items-center bg-stone-50 p-3 rounded">
           <div>
             <div class="text-sm font-medium">${item.name}</div>
-            <div class="text-xs text-stone-500">اللون: ${item.color}</div>
+            <div class="text-xs text-stone-500">Color: ${item.color}</div>
           </div>
           <div class="flex items-center gap-3">
-            <span class="text-sm font-display font-semibold">${item.price} د.ج</span>
+            <span class="text-sm font-display font-semibold">€${item.price}</span>
             <button onclick="removeItem(${i})" class="text-stone-400 hover:text-red-600"><i data-lucide="x" style="width:16px;height:16px"></i></button>
           </div>
         </div>
       `).join('');
       
       const total = cart.reduce((s, i) => s + parseInt(i.price), 0);
-      cartTotalEl.textContent = total.toLocaleString() + ' د.ج';
+      cartTotalEl.textContent = '€' + total.toLocaleString();
       lucide.createIcons();
     }
 
@@ -279,7 +297,7 @@
       btn.addEventListener('click', (e) => {
         const card = e.target.closest('[data-product]');
         const activeColor = card.querySelector('.color-swatch.active');
-        const colorName = activeColor ? activeColor.dataset.color : 'افتراضي';
+        const colorName = activeColor ? activeColor.dataset.color : 'Default';
         cart.push({ name: card.dataset.product, price: card.dataset.price, color: colorName });
         updateCart();
         openCart();
@@ -289,7 +307,7 @@
     document.getElementById('checkout-btn').addEventListener('click', () => {
       const form = document.getElementById('checkout-form');
       if (!form.checkValidity()) { form.reportValidity(); return; }
-      if (cart.length === 0) { alert('حقيبة التسوق فارغة'); return; }
+      if (cart.length === 0) { alert('Your bag is empty'); return; }
       document.getElementById('demo-notice').classList.remove('hidden');
     });
 
@@ -313,4 +331,5 @@
   </script>
  </body>
 </html>
+
 
