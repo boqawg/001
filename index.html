@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ar" dir="ltr">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260730-05-6814160","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,0","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHO2EIdDP0,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YADy3sAhvXQ,0","Oleo Script":"YACgEQQ14jI,0","Playfair Display":"YAFdJhem5V8,1","Poppins":"YAE5fPSY9qM,0","Press Start 2P":"YAFyGr-8pmQ,0","Source Sans 3":"YAG4lO1Mj10,0","Space Grotesk":"YAHO2sjPCSM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0"}}');</script><script src="/_sdk/a27874207e105461.telemetry_sdk.js" integrity="sha512-wgI5N9F7oA2h3vH+benMYIv4wGqTct4nKWakqgvfgRyBLmfYq8q/fi6gkfWKd2hMsyN+VQ/qOAOpxybwkcoxlA=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Fashion Store</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&amp;family=Raleway:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <style>
+    :root { --ivory: #F5F0EB; --stone: #8C8279; --charcoal: #2C2825; --warm-beige: #E8E0D8; }
+    body { font-family: 'Raleway', sans-serif; }
+    .font-display { font-family: 'Playfair Display', serif; }
+    .parallax-hero { transform: translateY(0); transition: transform 0.1s linear; }
+    .product-card { transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.4s ease; }
+    .product-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(44,40,37,0.1); }
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .cart-panel { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94); }
+    .cart-panel.open { transform: translateX(0); }
+    .overlay { opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+    .overlay.open { opacity: 1; pointer-events: auto; }
+    .color-swatch { width: 24px; height: 24px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; transition: border-color 0.2s; }
+    .color-swatch.active { border-color: #2C2825; }
+  </style>
+  <script src="/_sdk/935a53bc2e11fb8d.data_sdk.js" type="text/javascript" integrity="sha512-qr2oyPnEys1WebcOABaRh6hG77r5PWpqeWW6JTKbRJqly/INsfBi31CVNlTmHqjgeLpkVmmHZJUdxSx/32tOFQ=="></script>
+  <script src="/_sdk/6030e540d4419216.resizing_sdk.js" type="text/javascript" integrity="sha512-b5KWzyoXsbWP4smq4sftIi6Kts4YVBpBsz0BwCViwbBJkK64a3/Z6ZMdWA+qnplNcXw4mhZeqvQi3mOosiRJdA=="></script>
+ </head>
+ <body data-template-id="__page-root" class="w-full min-h-screen"><!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-100">
+   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <h1 data-template-id="brand-name" class="canva-text font-display text-2xl tracking-wider"></h1>
+    <div class="flex items-center gap-8"><a data-template-id="nav-collection" class="canva-link text-sm tracking-widest uppercase cursor-pointer"></a> <a data-template-id="nav-about" class="canva-link text-sm tracking-widest uppercase cursor-pointer"></a> <button id="cart-btn" class="relative" aria-label="Open cart"> <i data-lucide="shopping-bag" style="width:22px;height:22px;color:#2C2825"></i> <span id="cart-count" class="absolute -top-2 -right-2 w-5 h-5 bg-[#2C2825] text-white text-xs rounded-full flex items-center justify-center hidden">0</span> </button>
+    </div>
+   </div>
+  </nav>
+  <main><!-- Hero -->
+   <header class="relative w-full overflow-hidden" style="height:calc(90 * min(var(--vh,1vh),1vh))">
+    <div id="hero-parallax" class="parallax-hero absolute inset-0"><img data-template-id="hero-image" class="canva-image w-full h-full object-cover" loading="lazy">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+    <div class="absolute bottom-16 left-8 md:left-16">
+     <p data-template-id="hero-tagline" class="canva-text font-display text-white text-4xl md:text-6xl leading-tight"></p>
+    </div>
+   </header><!-- Products -->
+   <section data-template-id="products-section" class="canva-section py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+     <h2 data-template-id="products-heading" class="canva-text font-display text-center mb-16"></h2>
+     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"><!-- Product 1 -->
+      <div class="product-card fade-in cursor-pointer" data-product="Oro Timepiece" data-price="€2,450">
+       <div class="aspect-[3/4] overflow-hidden rounded-sm mb-4"><img data-template-id="product-1-img" class="canva-image w-full h-full object-cover" loading="lazy">
+       </div>
+       <h3 data-template-id="product-1-name" class="canva-text font-display text-lg"></h3>
+       <p data-template-id="product-1-price" class="canva-text mt-1 text-sm"></p>
+       <div class="flex gap-2 mt-2"><span class="color-swatch active" style="background:#C5A858" data-color="ذهبي"></span> <span class="color-swatch" style="background:#C0C0C0" data-color="فضي"></span> <span class="color-swatch" style="background:#1a1a1a" data-color="أسود"></span>
+       </div><button class="add-to-bag mt-3 text-xs tracking-widest uppercase border-b border-current pb-0.5 hover:opacity-60 transition-opacity">Add to Bag</button>
+      </div><!-- Product 2 -->
+      <div class="product-card fade-in cursor-pointer" data-product="Cuoio Wallet" data-price="€680">
+       <div class="aspect-[3/4] overflow-hidden rounded-sm mb-4"><img data-template-id="product-2-img" class="canva-image w-full h-full object-cover" loading="lazy">
+       </div>
+       <h3 data-template-id="product-2-name" class="canva-text font-display text-lg"></h3>
+       <p data-template-id="product-2-price" class="canva-text mt-1 text-sm"></p>
+       <div class="flex gap-2 mt-2"><span class="color-swatch active" style="background:#8B4513" data-color="بني"></span> <span class="color-swatch" style="background:#1a1a1a" data-color="أسود"></span> <span class="color-swatch" style="background:#2F4F4F" data-color="أخضر داكن"></span>
+       </div><button class="add-to-bag mt-3 text-xs tracking-widest uppercase border-b border-current pb-0.5 hover:opacity-60 transition-opacity">Add to Bag</button>
+      </div><!-- Product 3 -->
+      <div class="product-card fade-in cursor-pointer" data-product="Seta Scarf" data-price="€520">
+       <div class="aspect-[3/4] overflow-hidden rounded-sm mb-4"><img data-template-id="product-3-img" class="canva-image w-full h-full object-cover" loading="lazy">
+       </div>
+       <h3 data-template-id="product-3-name" class="canva-text font-display text-lg"></h3>
+       <p data-template-id="product-3-price" class="canva-text mt-1 text-sm"></p>
+       <div class="flex gap-2 mt-2"><span class="color-swatch active" style="background:#F5C6D0" data-color="وردي"></span> <span class="color-swatch" style="background:#4169E1" data-color="أزرق"></span> <span class="color-swatch" style="background:#8B0000" data-color="أحمر"></span>
+       </div><button class="add-to-bag mt-3 text-xs tracking-widest uppercase border-b border-current pb-0.5 hover:opacity-60 transition-opacity">Add to Bag</button>
+      </div><!-- Product 4 -->
+      <div class="product-card fade-in cursor-pointer" data-product="Cintura Belt" data-price="€390">
+       <div class="aspect-[3/4] overflow-hidden rounded-sm mb-4"><img data-template-id="product-4-img" class="canva-image w-full h-full object-cover" loading="lazy">
+       </div>
+       <h3 data-template-id="product-4-name" class="canva-text font-display text-lg"></h3>
+       <p data-template-id="product-4-price" class="canva-text mt-1 text-sm"></p>
+       <div class="flex gap-2 mt-2"><span class="color-swatch active" style="background:#8B4513" data-color="بني"></span> <span class="color-swatch" style="background:#1a1a1a" data-color="أسود"></span> <span class="color-swatch" style="background:#D2691E" data-color="بني فاتح"></span>
+       </div><button class="add-to-bag mt-3 text-xs tracking-widest uppercase border-b border-current pb-0.5 hover:opacity-60 transition-opacity">Add to Bag</button>
+      </div>
+     </div>
+    </div>
+   </section><!-- Craftsmanship -->
+   <section class="relative w-full overflow-hidden" style="height:calc(70 * min(var(--vh,1vh),1vh))">
+    <div id="craft-parallax" class="parallax-hero absolute inset-0"><img data-template-id="collection-image" class="canva-image w-full h-full object-cover" loading="lazy">
+    </div>
+    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+     <p data-template-id="craft-text" class="canva-text font-display text-white text-3xl md:text-5xl text-center px-6"></p>
+    </div>
+   </section><!-- Contact Section -->
+   <section data-template-id="contact-section" class="canva-section py-16 px-6">
+    <div class="max-w-7xl mx-auto text-center">
+     <h2 data-template-id="contact-heading" class="canva-text font-display mb-8"></h2>
+     <div class="flex justify-center gap-8"><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-[#2C2825] hover:opacity-60 transition-opacity"> <i data-lucide="instagram" style="width:28px;height:28px"></i> </a> <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="text-[#2C2825] hover:opacity-60 transition-opacity"> <i data-lucide="facebook" style="width:28px;height:28px"></i> </a> <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="text-[#2C2825] hover:opacity-60 transition-opacity"> <i data-lucide="twitter" style="width:28px;height:28px"></i> </a> <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="text-[#2C2825] hover:opacity-60 transition-opacity"> <i data-lucide="message-circle" style="width:28px;height:28px"></i> </a> <a href="mailto:contact@maisonvalente.com" target="_blank" rel="noopener noreferrer" class="text-[#2C2825] hover:opacity-60 transition-opacity"> <i data-lucide="mail" style="width:28px;height:28px"></i> </a>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer data-template-id="footer-section" class="canva-footer py-16 px-6">
+    <div class="max-w-7xl mx-auto text-center">
+     <p data-template-id="footer-text" class="canva-text text-sm tracking-widest uppercase"></p>
+    </div>
+   </footer>
+  </main><!-- Cart Panel -->
+  <div id="cart-overlay" class="overlay fixed inset-0 z-[60] bg-black/40" aria-hidden="true"></div>
+  <aside id="cart-panel" class="cart-panel fixed top-0 right-0 bottom-0 z-[70] w-full max-w-md bg-white shadow-2xl flex flex-col" aria-label="Shopping bag">
+   <div class="flex items-center justify-between p-6 border-b">
+    <h2 data-template-id="cart-title" class="canva-text font-display text-xl"></h2><button id="cart-close" aria-label="Close cart"><i data-lucide="x" style="width:24px;height:24px"></i></button>
+   </div>
+   <div class="flex-1 overflow-y-auto p-6 space-y-6"><!-- Cart Items -->
+    <div id="cart-items" class="space-y-4"></div><!-- Customer Info Form -->
+    <form id="checkout-form" class="space-y-4 border-t pt-6">
+     <h3 data-template-id="form-title" class="canva-text font-display text-lg"></h3>
+     <div class="grid grid-cols-2 gap-3">
+      <div><label data-template-id="label-firstname" class="canva-text block text-xs uppercase tracking-wide mb-1" for="inp-firstname"></label> <input id="inp-firstname" type="text" class="w-full border border-stone-200 rounded px-3 py-2 text-sm focus:outline-none focus:border-[#2C2825]" required>
+      </div>
+      <div><label data-template-id="label-lastname" class="canva-text block text-xs uppercase tracking-wide mb-1" for="inp-lastname"></label> <input id="inp-lastname" type="text" class="w-full border border-stone-200 rounded px-3 py-2 text-sm focus:outline-none focus:border-[#2C2825]" required>
+      </div>
+     </div>
+     <div><label data-template-id="label-phone" class="canva-text block text-xs uppercase tracking-wide mb-1" for="inp-phone"></label> <input id="inp-phone" type="tel" class="w-full border border-stone-200 rounded px-3 py-2 text-sm focus:outline-none focus:border-[#2C2825]" required>
+     </div>
+     <div><label data-template-id="label-wilaya" class="canva-text block text-xs uppercase tracking-wide mb-1" for="inp-wilaya"></label> <select id="inp-wilaya" class="w-full border border-stone-200 rounded px-3 py-2 text-sm focus:outline-none focus:border-[#2C2825]" required> <option value="">-- اختر الولاية --</option> <option>01 - أدرار</option><option>02 - الشلف</option><option>03 - الأغواط</option><option>04 - أم البواقي</option><option>05 - باتنة</option><option>06 - بجاية</option><option>07 - بسكرة</option><option>08 - بشار</option><option>09 - البليدة</option><option>10 - البويرة</option> <option>11 - تمنراست</option><option>12 - تبسة</option><option>13 - تلمسان</option><option>14 - تيارت</option><option>15 - تيزي وزو</option><option>16 - الجزائر</option><option>17 - الجلفة</option><option>18 - جيجل</option><option>19 - سطيف</option><option>20 - سعيدة</option> <option>21 - سكيكدة</option><option>22 - سيدي بلعباس</option><option>23 - عنابة</option><option>24 - قالمة</option><option>25 - قسنطينة</option><option>26 - المدية</option><option>27 - مستغانم</option><option>28 - المسيلة</option><option>29 - معسكر</option><option>30 - ورقلة</option> <option>31 - وهران</option><option>32 - البيض</option><option>33 - إليزي</option><option>34 - برج بوعريريج</option><option>35 - بومرداس</option><option>36 - الطارف</option><option>37 - تندوف</option><option>38 - تيسمسيلت</option><option>39 - الوادي</option><option>40 - خنشلة</option> <option>41 - سوق أهراس</option><option>42 - تيبازة</option><option>43 - ميلة</option><option>44 - عين الدفلى</option><option>45 - النعامة</option><option>46 - عين تموشنت</option><option>47 - غرداية</option><option>48 - غليزان</option> <option>49 - تيميمون</option><option>50 - برج باجي مختار</option><option>51 - أولاد جلال</option><option>52 - بني عباس</option><option>53 - عين صالح</option><option>54 - عين قزام</option><option>55 - تقرت</option><option>56 - جانت</option><option>57 - المغير</option><option>58 - المنيعة</option> </select>
+     </div><!-- Payment Method -->
+     <div>
+      <p data-template-id="label-payment" class="canva-text block text-xs uppercase tracking-wide mb-2"></p>
+      <div class="space-y-2"><label class="flex items-center gap-2 cursor-pointer"> <input type="radio" name="payment" value="ccp" class="accent-[#2C2825]" required> <span class="text-sm">CCP</span> </label> <label class="flex items-center gap-2 cursor-pointer"> <input type="radio" name="payment" value="gold-card" class="accent-[#2C2825]"> <span class="text-sm">البطاقة الذهبية</span> </label> <label class="flex items-center gap-2 cursor-pointer"> <input type="radio" name="payment" value="cash" class="accent-[#2C2825]"> <span class="text-sm">الدفع عند الاستلام</span> </label>
+      </div>
+     </div>
+    </form>
+   </div>
+   <div class="p-6 border-t">
+    <div class="flex justify-between mb-4"><span class="text-sm tracking-wide uppercase">المجموع</span> <span id="cart-total" class="font-display text-lg">€0</span>
+    </div><button data-template-id="checkout-btn" class="canva-button w-full py-4 text-sm tracking-widest uppercase transition-opacity hover:opacity-80"></button>
+    <p id="demo-notice" class="text-center text-xs mt-3 text-stone-400 hidden">عرض تجريبي — لم يتم معالجة أي دفع</p>
+   </div>
+  </aside>
+  <script src="/_sdk/b23f1f6ec78e9bd4.editing_sdk.js" integrity="sha512-WFdQutvUZzxrmcHkL8cbfuFDTeF8Cn8Bt3yqX/a/OdiqPz/t9UcjsIsZK7D+tMTmC2JTwhwRJNyfcHmIWhG8Wg=="></script>
+  <script>
+    lucide.createIcons();
+
+    // Color swatch selection
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.querySelectorAll('.color-swatch').forEach(swatch => {
+        swatch.addEventListener('click', (e) => {
+          e.stopPropagation();
+          card.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
+          swatch.classList.add('active');
+        });
+      });
+    });
+
+    // Cart state
+    let cart = [];
+    const cartBtn = document.getElementById('cart-btn');
+    const cartPanel = document.getElementById('cart-panel');
+    const cartOverlay = document.getElementById('cart-overlay');
+    const cartClose = document.getElementById('cart-close');
+    const cartCountEl = document.getElementById('cart-count');
+    const cartItemsEl = document.getElementById('cart-items');
+    const cartTotalEl = document.getElementById('cart-total');
+
+    function openCart() { cartPanel.classList.add('open'); cartOverlay.classList.add('open'); }
+    function closeCart() { cartPanel.classList.remove('open'); cartOverlay.classList.remove('open'); }
+    cartBtn.addEventListener('click', openCart);
+    cartClose.addEventListener('click', closeCart);
+    cartOverlay.addEventListener('click', closeCart);
+
+    function updateCart() {
+      cartCountEl.textContent = cart.length;
+      cartCountEl.classList.toggle('hidden', cart.length === 0);
+      cartItemsEl.innerHTML = cart.map((item, i) => `
+        <div class="flex justify-between items-center">
+          <div><span class="text-sm">${item.name}</span><span class="text-xs text-stone-400 ml-2">(${item.color})</span></div>
+          <div class="flex items-center gap-3">
+            <span class="text-sm font-display">${item.price}</span>
+            <button onclick="removeItem(${i})" class="text-stone-400 hover:text-stone-700"><i data-lucide="x" style="width:14px;height:14px"></i></button>
+          </div>
+        </div>
+      `).join('');
+      const total = cart.reduce((s, i) => s + parseInt(i.price.replace(/[^\d]/g, '')), 0);
+      cartTotalEl.textContent = '€' + total.toLocaleString();
+      lucide.createIcons();
+    }
+
+    window.removeItem = function(i) { cart.splice(i, 1); updateCart(); };
+
+    document.querySelectorAll('.add-to-bag').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const card = e.target.closest('[data-product]');
+        const activeColor = card.querySelector('.color-swatch.active');
+        const colorName = activeColor ? activeColor.dataset.color : '';
+        cart.push({ name: card.dataset.product, price: card.dataset.price, color: colorName });
+        updateCart();
+        openCart();
+      });
+    });
+
+    document.getElementById('checkout-form').addEventListener('submit', (e) => e.preventDefault());
+
+    document.querySelector('[data-template-id="checkout-btn"]').addEventListener('click', () => {
+      const form = document.getElementById('checkout-form');
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      if (cart.length === 0) return;
+      document.getElementById('demo-notice').classList.remove('hidden');
+    });
+
+    // Parallax
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      document.getElementById('hero-parallax').style.transform = `translateY(${y * 0.3}px)`;
+      const craft = document.getElementById('craft-parallax');
+      const rect = craft.parentElement.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        craft.style.transform = `translateY(${(rect.top - window.innerHeight) * -0.2}px)`;
+      }
+    });
+
+    // Fade in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 120);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+ </body>
+</html>
